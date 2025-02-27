@@ -41,7 +41,7 @@ spec:
             - name: http
               containerPort: {{ .Values.deploymentPort | default 80 }}
               protocol: TCP
-          command: ["bun", "run", "start"]
+          command: {{ .Values.command }}
           {{- if .Values.env }}
           env:
             {{- if .Values.env.configMap}}
