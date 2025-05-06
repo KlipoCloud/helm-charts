@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  go:
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2025-05-06T07:29:30.743612607Z"
+    description: GO API Helm chart КC
+    digest: 35fab2e75f3cd27d6b3457600c4ca2d4e56d2633bab6f87235a44619e1860c3b
+    name: go
+    type: application
+    urls:
+    - https://github.com/KlipoCloud/helm-charts/releases/download/go-1.0.1/go-1.0.1.tgz
+    version: 1.0.1
   nestjs:
   - apiVersion: v2
     appVersion: 1.0.4
@@ -41,4 +52,4 @@ entries:
     urls:
     - https://github.com/KlipoCloud/helm-charts/releases/download/nestjs-1.0.1/nestjs-1.0.1.tgz
     version: 1.0.1
-generated: "2025-02-27T07:54:40.805981067Z"
+generated: "2025-05-06T07:29:30.743626984Z"
