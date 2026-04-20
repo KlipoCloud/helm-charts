@@ -92,6 +92,15 @@ tolerations: []
 
 affinity: {}
 
+# dnsConfig sets pod-level DNS options. Use ndots:2 to reduce DNS search-path
+# lookups from 5 to 2, eliminating EAI_AGAIN timeouts in high-DNS-traffic services.
+# Example:
+# dnsConfig:
+#   options:
+#     - name: ndots
+#       value: "2"
+dnsConfig: {}
+
 disableHealthProbes: true
 # readinessProbe:
 #   tcpSocket:
