@@ -37,6 +37,10 @@ serviceAccount:
 
 podAnnotations: {}
 
+# Extra labels merged onto the pod template (in addition to selectorLabels).
+# Used e.g. for Azure Workload Identity (`azure.workload.identity/use: "true"`).
+podLabels: {}
+
 podSecurityContext: {}
   # fsGroup: 2000
 
