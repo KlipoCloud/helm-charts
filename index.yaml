@@ -13,6 +13,16 @@ entries:
     version: 1.0.1
   nestjs:
   - apiVersion: v2
+    appVersion: 1.0.7
+    created: "2026-07-15T12:25:42.827534916Z"
+    description: NestJS API Helm chart КC
+    digest: 967445f27e592d9cac6161f395fcc46b148876fc41a2b2647203161be1aa8109
+    name: nestjs
+    type: application
+    urls:
+    - https://github.com/KlipoCloud/helm-charts/releases/download/nestjs-1.0.7/nestjs-1.0.7.tgz
+    version: 1.0.7
+  - apiVersion: v2
     appVersion: 1.0.6
     created: "2026-07-15T11:32:59.067695031Z"
     description: NestJS API Helm chart КC
@@ -72,4 +82,4 @@ entries:
     urls:
     - https://github.com/KlipoCloud/helm-charts/releases/download/nestjs-1.0.1/nestjs-1.0.1.tgz
     version: 1.0.1
-generated: "2026-07-15T11:32:59.067721782Z"
+generated: "2026-07-15T12:25:42.827571491Z"
