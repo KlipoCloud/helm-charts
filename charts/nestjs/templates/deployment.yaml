@@ -98,11 +98,16 @@ spec:
             timeoutSeconds: 5
           {{- end }}
           {{- end }}
-          {{- if .Values.secretMounts}}
+          {{- if or .Values.secretMounts .Values.extraVolumeMounts }}
           volumeMounts:
+            {{- if .Values.secretMounts }}
             - mountPath: {{ .Values.secretMounts.mountPath }}
               name: secret-mount
               readOnly: true
+            {{- end }}
+            {{- with .Values.extraVolumeMounts }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
           {{- end }}
           resources: {{ .Values.resources | toYaml | nindent 12 }}
       {{- with .Values.nodeSelector }}
@@ -121,9 +126,14 @@ spec:
       dnsConfig:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{- if .Values.secretMounts}}
+      {{- if or .Values.secretMounts .Values.extraVolumes }}
       volumes:
+        {{- if .Values.secretMounts }}
         - name: secret-mount
           secret:
             secretName: {{ include "helm.fullname" . }}-secrets-mount
+        {{- end }}
+        {{- with .Values.extraVolumes }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
       {{- end }}

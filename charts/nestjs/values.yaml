@@ -41,6 +41,12 @@ podAnnotations: {}
 # Used e.g. for Azure Workload Identity (`azure.workload.identity/use: "true"`).
 podLabels: {}
 
+# Extra volumes + volumeMounts on the pod/container (in addition to secretMounts).
+# e.g. an AWS IRSA-style projected token (serviceAccountToken audience
+# sts.amazonaws.com) for keyless AWS alongside Azure Workload Identity.
+extraVolumes: []
+extraVolumeMounts: []
+
 podSecurityContext: {}
   # fsGroup: 2000
 
